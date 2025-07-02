@@ -7,8 +7,10 @@ This repository contains the research code for **"LLM-Based Context Segmentation
 Text segmentation is a fundamental NLP task that involves identifying topic boundaries in documents. This research explores how modern LLMs can be leveraged for this task using different methodologies:
 
 1. **Direct LLM-based segmentation**: Using prompts to determine if consecutive sentences belong to the same topic
-2. **RAG-enhanced segmentation**: Incorporating retrieval-augmented generation for context-aware decisions
+2. **RAG-enhanced segmentation**: Incorporating retrieval-augmented generation for context-aware decisions ⚠️ **[EXPERIMENTAL - Work in Progress]**
 3. **Multi-model comparison**: Evaluating performance across different LLMs (Mistral, GPT-4o, OpenAI o1, DeepSeek)
+
+> **Note**: The RAG-based segmentation approach is currently experimental and under active development. Results may vary and the implementation is subject to significant changes.
 
 ## 📊 Datasets
 
@@ -75,7 +77,7 @@ The project evaluates segmentation performance on multiple benchmark datasets:
    predictions = determinor.query_batch_data(sentences)
    ```
 
-2. **RAG-based segmentation**:
+2. **RAG-based segmentation** ⚠️ **[EXPERIMENTAL]**:
 
    ```python
    from src.rag import RAG
@@ -83,6 +85,8 @@ The project evaluates segmentation performance on multiple benchmark datasets:
    rag = RAG()
    result = rag.query_data("Are these sentences about the same topic?")
    ```
+
+   > **Warning**: The RAG implementation is still experimental and may not produce reliable results. Use the `Determinor` class for stable text segmentation.
 
 ### Running Experiments
 
@@ -105,18 +109,53 @@ The project uses standard text segmentation evaluation metrics:
 
 ```
 llm-context-ts/
-├── src/                          # Source code
-│   ├── determinor.py            # Main segmentation logic
-│   ├── rag.py                   # RAG-based segmentation
-│   ├── populate_database.py     # Database setup utilities
-│   ├── query_data.py           # Data querying utilities
-│   └── dataset/                # Dataset handling utilities
-├── notebooks/                   # Jupyter notebooks for experiments
-├── db/                         # Database utilities and schemas
-├── data/                       # Dataset storage (excluded from git)
-├── requirements.txt            # Python dependencies
-└── README.md                  # This file
+├── 📄 README.md                     # Project documentation and setup guide
+├── 🔒 .gitignore                   # Git ignore rules (excludes large files, keys, cache)
+├── 📦 requirements.txt             # Python dependencies
+├── 🚀 setup.py                     # Automated setup and environment configuration
+├── 💡 example.py                   # Quick start example script
+├── 📋 CONTRIBUTING.md              # Contributor guidelines and development setup
+├── ⚖️ LICENSE                      # MIT license
+│
+├── 📊 src/                         # Source code
+│   ├── determinor.py              # 🔹 Main segmentation logic (STABLE)
+│   ├── rag.py                     # 🚧 RAG-based segmentation (EXPERIMENTAL)
+│   ├── populate_database.py       # Database setup utilities
+│   ├── query_data.py             # Data querying utilities
+│   ├── get_embedding_function.py  # Embedding utilities for ChromaDB
+│   ├── test_rag.py               # RAG testing utilities
+│   └── dataset/                   # Dataset handling utilities
+│
+├── 📓 notebooks/                   # Jupyter notebooks for experiments
+│   ├── 1.0-context-ts-testing.ipynb           # Basic segmentation testing
+│   ├── 1.0-context-ts-testing-choi.ipynb      # Choi dataset evaluation
+│   ├── 1.0-context-ts-testing-wikisection.ipynb # Wikipedia segmentation
+│   ├── 1.0-context-ts-testing-meeting.ipynb   # Meeting transcript segmentation
+│   └── 1.1-context-ts-evaluation.ipynb        # Comprehensive evaluation with metrics
+│
+├── 🗃️ db/                         # Database utilities and schemas
+│   ├── db.py                      # Database interface utilities
+│   ├── dbv2.py                    # Enhanced database utilities
+│   └── *.db                       # Dataset databases (excluded from git)
+│
+├── 📂 data/                        # Dataset storage (excluded from git)
+│   └── choi/                      # Choi dataset files
+│       ├── 1/, 2/, 3/, 4/        # Different dataset configurations
+│
+└── 🔧 Generated during setup:
+    ├── .env                       # Environment variables (API keys)
+    ├── chroma/                    # ChromaDB vector storage
+    ├── outputs/                   # Experimental outputs
+    └── logs/                      # Application logs
 ```
+
+### Key Components
+
+- **🔹 Stable Components**: `src/determinor.py` - Production-ready text segmentation
+- **🚧 Experimental**: `src/rag.py` - RAG-based segmentation (work in progress)
+- **📊 Evaluation**: Multiple Jupyter notebooks for different datasets and approaches
+- **🗃️ Data Management**: Database utilities for handling various text segmentation datasets
+- **🔧 Setup**: Automated configuration and dependency management
 
 ## 🔧 Configuration Options
 
