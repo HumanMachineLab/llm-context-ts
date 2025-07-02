@@ -1,0 +1,14 @@
+pypdf
+langchain
+langchain-community
+langchain-openai
+chromadb  # Vector storage
+pytest
+boto3
+python-dotenv  # For loading environment variables from .env files
+nltk  # For evaluation metrics (pk, windowdiff)
+numpy
+pandas
+jupyter
+notebook
+ollama  # For local LLM inference

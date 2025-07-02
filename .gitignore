@@ -1,0 +1,101 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+.env
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ChromaDB vector storage
+chroma/
+notebooks/chroma/
+
+# Database files (exclude large dataset databases)
+*.db
+db/*.db
+!db/db.py
+!db/dbv2.py
+
+# Large data files
+data/
+# Keep data directory structure but exclude actual files
+!data/
+!data/*/
+data/*/*.txt
+data/*/*.json
+data/*/*.csv
+data/*/*.pdf
+
+# API Keys and sensitive information
+.env
+config.py
+*.key
+*.pem
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+
+# Model files and embeddings (can be large)
+*.model
+*.bin
+embeddings/
+
+# Experimental outputs
+outputs/
+results/
+experiments/ 
