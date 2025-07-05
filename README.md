@@ -214,13 +214,13 @@ If you use this code in your research, please cite:
 
 ```bibtex
 @InProceedings{llm-context-segmentation-2025,
-   author={Maraj, Amit and Martin, Miguel Vargas},
-   title={Context is the Key for LLM-Based Text Segmentation},
-   booktitle={Natural Language Processing and Information Systems},
-   year={2026},
-   publisher={Springer Nature Switzerland},
-   pages={142--155},
-   isbn={978-3-031-97141-9}
+   author="Maraj, Amit and Martin, Miguel Vargas",
+   title="Context is the Key for LLM-Based Text Segmentation",
+   booktitle="Natural Language Processing and Information Systems",
+   year="2026",
+   publisher="Springer Nature Switzerland",
+   pages="142--155",
+   isbn="978-3-031-97141-9"
 }
 ```
 
