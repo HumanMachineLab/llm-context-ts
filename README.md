@@ -214,7 +214,7 @@ If you use this code in your research, please cite:
 
 ```bibtex
 @InProceedings{llm-context-segmentation-2025,
-   author="Maraj, Amit and Martin, Miguel Vargas",
+   author="Maraj, Amit and {Vargas Martin}, Miguel",
    title="Context is the Key for LLM-Based Text Segmentation",
    booktitle="Natural Language Processing and Information Systems",
    year="2026",
